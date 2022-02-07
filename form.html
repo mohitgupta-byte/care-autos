@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div class="page-content">
+		<div class="form-v1-content">
+			<div class="wizard-form">
+		        <form class="form-register" action="#" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>
+			            	<p class="step-icon"><span>01</span></p>
+			            	<span class="step-text">Peronal Infomation</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Peronal Infomation</h3>
+									<p>Please enter infomation.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Name</legend>
+											<input type="text" class="form-control" id="phone" name="phone" placeholder="Name" required>
+										</fieldset>
+									</div>
+								</div>
+							
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Phone Number</legend>
+											<input type="text" class="form-control" id="phone" name="phone" placeholder="+1 888-999-7777" required>
+										</fieldset>
+									</div>
+								</div>
+							
+							</div>
+			            </section>
+						<!-- SECTION 2 -->
+			           
+						<h2>
+			            	<p class="step-icon"><span>02</span></p>
+			            	<span class="step-text">Vehicle Details</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Vehicle Details</h3>
+									<p>Please enter infomation.</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Brands</legend>
+											<input type="text" class="form-control" id="first-name" name="first-name" placeholder="Brands" required>
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Models</legend>
+											<input type="text" class="form-control" id="last-name" name="last-name" placeholder="Models" required>
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>RC Number</legend>
+											<input type="text" name="your_email" id="your_email" class="form-control"  placeholder="RC Number" required>
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend for="cars">Vehicle Type</legend>
+											<select  name="cars" id="cars">
+												<option value="2 wheeler">2 wheeler</option>
+												<option value="4 wheeler">4 wheeler</option>
+											</select>
+										</fieldset>
+									</div>
+								</div>
+								
+							</div>
+			            </section>
+			            
+			            <!-- SECTION 3 -->
+						<h2>
+			            	<p class="step-icon"><span>03</span></p>
+			            	<span class="step-text">Insurance Details</span>
+			            </h2>
+
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Insurance Details</h3>
+									<p>Please enter  infomation.</p>
+								</div>
+							
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend for="cars">Policy Type</legend>
+											<select  name="cars" id="cars">
+												<option value="On Damage">On Damage</option>
+												<option value="Comprehensive">Comprehensive</option>
+												<option value="Third Party">Third Party</option>
+
+											</select>
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Date of Expiration of previous policy</legend>
+											<input type="date" class="form-control" id="phone" name="phone" required>
+										</fieldset>
+									</div>
+								</div>
+
+								<div class="col-md-6 border rounded shadow-sm">
+									<div class="form-row">
+									  <div class="form-group">
+										<input type="radio" id="others" name="subject" value="yes" checked onclick="EnableDisableTB()">
+										YES </div>
+									  <div class="form-group">
+										<input type="radio" id="hin" name="subject" value="no" onclick="EnableDisableTB()">
+										NO</div>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend for="bonus">No Claim Bonus</legend>
+											<select id="otherlan" name="bonus" >
+												<option value="5">5%</option>
+												<option value="20">20%</option>
+												<option value="25">25%</option>
+												<option value="30">30%</option>
+												<option value="35">35%</option>
+												<option value="40">40%</option>
+												<option value="45">45%</option>
+												<option value="50">50%</option>
+											</select>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+			            </section>
+
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="js2/jquery-3.3.1.min.js"></script>
+	<script src="js2/jquery.steps.js"></script>
+	<script src="js2/main.js"></script>
+
+	<script type="text/javascript">
+		function EnableDisableTB() {
+			var others = document.getElementById("others");
+			var otherlan = document.getElementById("otherlan");
+			otherlan.disabled = others.checked ? false : true;
+			otherlan.value="";
+			if (!otherlan.disabled) {
+				otherlan.focus();
+			}
+		}
+	</script>
+
+</body>
+</html>
