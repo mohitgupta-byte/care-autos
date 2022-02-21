@@ -1300,3 +1300,10 @@ h5 {
     font-size: 16px
 }
 /* services listing page ends  */
+
+
+.services-brands{
+    position:relative;
+    left:-64px;
+    top:2px;
+    }
